@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/libraryChooser">
+
+    <fragment
+        android:id="@+id/libraryChooser"
+        android:name="com.navdara.base.LibraryChooser"
+        android:label="fragment_library_chooser"
+        tools:layout="@layout/fragment_library_chooser" >
+        <action
+            android:id="@+id/action_libraryChooser_to_withRoom"
+            app:destination="@id/withRoom" />
+    </fragment>
+    <fragment
+        android:id="@+id/withRoom"
+        android:name="com.navdara.room.presentation.messages.MessagesRoom"
+        android:label="fragment_with_room"
+        tools:layout="@layout/fragment_with_room" >
+        <action
+            android:id="@+id/action_withRoom_to_libraryChooser"
+            app:destination="@id/libraryChooser" />
+        <action
+            android:id="@+id/action_withRoom_to_readWithRoom"
+            app:destination="@id/readWithRoom" />
+    </fragment>
+    <fragment
+        android:id="@+id/readWithRoom"
+        android:name="com.navdara.room.presentation.readMessage.ReadWithRoom"
+        android:label="fragment_read_with_room"
+        tools:layout="@layout/fragment_read_with_room" />
+</navigation>
