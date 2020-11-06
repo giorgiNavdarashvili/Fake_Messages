@@ -1,12 +1,9 @@
-{
-  "user" :{
-    "name" : "გიორგი",
-    "lastName": "ნავდარაშვილი",
-    "activities": ["10/10/20, 11/10/20"]
-  } ,
-  "subject" : "გამარჯობა",
-  "title" : "ბამბუკებმა პანდებს ომი გამოუცხადეს",
-  "content" : "diddmpmhieqlzkgkkycvoioqnqdhlalismtitjlmiubdvnvryrcnvepplbvyrueifcmrujhzumztbojamjdopbsxvodvgjjpskuckymbbvsdibiqqsdipfwtsylfxonkxvzgygyceizjxibvflhnmesbwjtxqflwfifyghajeourdiquyrcyzxcjybeadlxvvlquxx",
-  "image": "https://c.stocksy.com/a/ltW200/z9/603121.jpg"
-
-}
+name: mocki
+  port: 3000
+  endpoints:
+    - path: /hello
+      method: get
+      responses:
+        - statusCode: 200
+          body:
+            message: Hello from Mocki!
